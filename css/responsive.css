@@ -17,7 +17,7 @@
 
   .mt-header-row { display: none; }
   .mt-row { grid-template-columns: 1fr; background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; gap: 8px; }
-  .mt-cell--theme { padding-bottom: 4px; font-weight: 700; color: var(--text-hi); }
+  .mt-cell--theme { padding-bottom: 4px; font-weight: 700; color: var(--accent-2); }
   .mt-cell--value {
     display: flex;
     align-items: center;
@@ -26,14 +26,18 @@
     padding: 10px 12px;
   }
   .mt-cell--value::before {
-    content: attr(data-belt);
+    content: "Faixa " attr(data-belt);
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.04em;
-    text-transform: uppercase;
-    opacity: 0.75;
     margin-right: 10px;
+    color: var(--text-hi);
   }
+  .mt-cell--value.belt-branca::before { color: var(--belt-branca); }
+  .mt-cell--value.belt-azul::before { color: var(--belt-azul); }
+  .mt-cell--value.belt-roxa::before { color: var(--belt-roxa); }
+  .mt-cell--value.belt-marrom::before { color: var(--belt-marrom); }
+  .mt-cell--value.belt-preta::before { color: var(--text-hi); }
 
   .compare-heads { grid-template-columns: 1fr 1fr; }
   .compare-table { font-size: 0.78rem; }
