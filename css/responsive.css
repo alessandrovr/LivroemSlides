@@ -37,7 +37,12 @@
   .mt-cell--value.belt-azul::before { color: var(--belt-azul); }
   .mt-cell--value.belt-roxa::before { color: var(--belt-roxa); }
   .mt-cell--value.belt-marrom::before { color: var(--belt-marrom); }
-  .mt-cell--value.belt-preta::before { color: var(--text-hi); }
+  .mt-cell--value.belt-preta::before {
+    content: "Faixa " attr(data-belt);
+    text-transform: uppercase;
+    color: #000;
+    text-shadow: 0 0 6px rgba(255,77,61,0.9), 0 0 12px rgba(255,77,61,0.6);
+  }
 
   .compare-heads { grid-template-columns: 1fr 1fr; }
   .compare-table { font-size: 0.78rem; }
