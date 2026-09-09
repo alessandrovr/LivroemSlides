@@ -15,11 +15,25 @@
 
   .slideshow__body { padding: 22px; }
 
-  .mt-header-row, .mt-row { grid-template-columns: 1fr; }
-  .mt-cell--belthead, .mt-cell--value { text-align: left; }
-  .mt-row { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; }
-  .mt-cell--theme { padding-bottom: 4px; }
   .mt-header-row { display: none; }
+  .mt-row { grid-template-columns: 1fr; background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; gap: 8px; }
+  .mt-cell--theme { padding-bottom: 4px; font-weight: 700; color: var(--text-hi); }
+  .mt-cell--value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 10px 12px;
+  }
+  .mt-cell--value::before {
+    content: attr(data-belt);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-right: 10px;
+  }
 
   .compare-heads { grid-template-columns: 1fr 1fr; }
   .compare-table { font-size: 0.78rem; }
