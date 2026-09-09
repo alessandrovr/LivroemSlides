@@ -26,19 +26,19 @@ const App = (() => {
   /* ---------------------------- HOME --------------------------------- */
   function renderHome() {
     const cards = [
-      { href: "#/faixa/branca", title: "EXPLORAR MINHA FAIXA", desc: "Conheça a lógica e as competências de uma faixa.", color: "var(--pop-red)" },
-      { href: "#/checkup/branca", title: "FAZER MEU CHECKUP", desc: "Preencha o checklist interativo.", color: "var(--pop-orange)" },
-      { href: "#/tabela-mestra", title: "VER A TABELA-MESTRA", desc: "Explore a evolução transversal entre as faixas.", color: "var(--pop-teal)" },
-      { href: "#/comparar", title: "COMPARAR FAIXAS", desc: "Visualize como muda a maturidade entre faixas.", color: "var(--pop-purple)" },
-      { href: "#/progresso", title: "MEU PROGRESSO", desc: "Veja o resultado pessoal do seu checkup.", color: "var(--pop-green)" }
+      { href: "#/faixa/branca", title: "EXPLORAR MINHA FAIXA", desc: "Conheça a lógica e as competências de uma faixa." },
+      { href: "#/checkup/branca", title: "FAZER MEU CHECKUP", desc: "Preencha o checklist interativo." },
+      { href: "#/tabela-mestra", title: "VER A TABELA-MESTRA", desc: "Explore a evolução transversal entre as faixas." },
+      { href: "#/comparar", title: "COMPARAR FAIXAS", desc: "Visualize como muda a maturidade entre faixas." },
+      { href: "#/progresso", title: "MEU PROGRESSO", desc: "Veja o resultado pessoal do seu checkup." }
     ];
 
     root.innerHTML = `
       <header class="hero">
         <p class="hero__eyebrow">Mapa interativo da jornada no Jiu-Jitsu</p>
         <h1 class="hero__title">DE BRANCA A PRETA</h1>
-        <p class="hero__subtitle">Descubra em que faixa você está e o que fazer para evoluir.</p>
-        <p class="book-banner">📘 Este app é parte integrante do livro <strong>“De Branca a Preta”</strong>, de Alessandro Vieira dos Reis, e apresenta apenas uma parte do conteúdo do livro.</p>
+        <p class="hero__subtitle">Descubra se seu nível técnico já está à altura da sua faixa.</p>
+        <p class="book-banner">📘 Este app é parte integrante do livro “De Branca a Preta”, de Alessandro Vieira dos Reis, e apresenta apenas uma parte do conteúdo do livro.</p>
       </header>
 
       <section class="journey-strip" aria-label="A jornada">
@@ -61,7 +61,7 @@ const App = (() => {
 
       <section class="home-grid">
         ${cards.map(c => `
-          <a class="home-card" style="--card-color:${c.color}" href="${c.href}">
+          <a class="home-card" href="${c.href}">
             <h3>${c.title}</h3>
             <p>${c.desc}</p>
           </a>
