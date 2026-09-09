@@ -1,0 +1,40 @@
+/* ==========================================================================
+   responsive.css — ajustes mobile-first
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  #app { padding: 0 14px 60px; }
+
+  .topnav { padding: 14px 0; }
+  .topnav__links { gap: 14px; }
+  .topnav__links a { font-size: 0.82rem; }
+
+  .hero { padding: 24px 0 10px; }
+
+  .home-grid { grid-template-columns: 1fr; }
+
+  .slideshow__body { padding: 22px; }
+
+  .mt-header-row, .mt-row { grid-template-columns: 1fr; }
+  .mt-cell--belthead, .mt-cell--value { text-align: left; }
+  .mt-row { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; }
+  .mt-cell--theme { padding-bottom: 4px; }
+  .mt-header-row { display: none; }
+
+  .compare-heads { grid-template-columns: 1fr 1fr; }
+  .compare-table { font-size: 0.78rem; }
+  .compare-full .mt-row--compare { grid-template-columns: 1fr; background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px; margin-bottom: 8px; }
+
+  .check-row { flex-direction: column; align-items: stretch; }
+  .check-row__levels { justify-content: space-between; }
+  .level-btn { flex: 1; text-align: center; font-size: 0.68rem; padding: 8px 4px; }
+
+  .dash-grid { grid-template-columns: 1fr; }
+
+  .journey-track { padding-bottom: 12px; }
+  .journey-node { min-width: 92px; padding: 12px 8px; }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .dash-grid { grid-template-columns: repeat(2, 1fr); }
+}
